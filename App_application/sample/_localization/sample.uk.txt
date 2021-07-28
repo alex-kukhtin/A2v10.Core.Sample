@@ -1,0 +1,26 @@
+;
+@Catalog=Довідники
+@Agents=Контрагенти
+@Units=Одиниці виміру
+@Waybills=Прибуткові накладні
+@Waybill=Прибуткова накладна
+@Agents=Контрагенти
+@Agent=Контрагент
+@Product=Товар
+@Products=Товари
+@Phone=Телефон
+@EMail=e-mail
+@Article=Артикул
+@BarCode=Штрих-код
+@Total=Загалом
+@Open=Відкрити
+@Row.Add=Додати рядок
+@Error.Empty=Поле не може бути порожнім
+@Error.EMail=Неправильний е-mail
+@Error.Used=Елемент видалити неможливо. Він використовується в документах
+@Agent.Browse=Обрати контрагента
+@Product.Browse=Обрати товар
+@Order=№
+@AreYouSure=Ви впевнені?
+@Modified=Змінено
+@Images=Зображення

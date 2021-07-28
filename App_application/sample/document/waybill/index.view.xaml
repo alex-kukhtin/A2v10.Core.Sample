@@ -1,0 +1,32 @@
+﻿<Page xmlns="clr-namespace:A2v10.Xaml;assembly=A2v10.Xaml">
+	<Page.CollectionView>
+		<CollectionView RunAt="ServerUrl" ItemsSource="{Bind Documents}"/>
+	</Page.CollectionView>
+	<Page.Toolbar>
+		<Toolbar>
+			<Button Content="@[Create]" Icon="Plus" Command="{BindCmd Create, Url='/document/waybill/edit'}"/>
+			<Button Content="@[Open]" Icon="ArrowOpen" Command="{BindCmd Command=OpenSelected, Url='/document/waybill/edit', Argument={Bind Parent.ItemsSource}}"/>
+			<Button Content="@[Delete]" Icon="Delete" Command="{BindCmd Command=DbRemoveSelected, Argument={Bind Parent.ItemsSource}, Confirm='@[AreYouSure]'}"/>
+			<Separator />
+			<Button Content="@[Reload]" Icon="Reload" Command="{BindCmd Reload}"/>
+		</Toolbar>
+	</Page.Toolbar>
+	<DataGrid ItemsSource="{Bind Parent.ItemsSource}" GridLines="Horizontal" FixedHeader="True"
+			  DoubleClick="{BindCmd Open, Url='/document/waybill/edit', Argument={Bind Parent.ItemsSource.$selected}}">
+		<DataGridColumn Header="Id" Content="{Bind Id}" Fit="True" Wrap="NoWrap"/>
+		<DataGridColumn Header="@[Date]" Content="{Bind Date, DataType=Date}" Fit="True" Wrap="NoWrap"/>
+		<DataGridColumn Header="@[No]" Content="{Bind No}" Fit="True" Wrap="NoWrap"/>
+		<DataGridColumn Header="@[Sum]" Content="{Bind Sum, DataType=Currency}" Fit="True" Align="Right" Wrap="NoWrap"/>
+		<DataGridColumn Header="@[Agent]" Content="{Bind Agent.Name}" Sort="False"/>
+		<DataGridColumn Header="@[Memo]" Content="{Bind Memo}"/>
+		<DataGridColumn Fit="True" Wrap="NoWrap">
+			<CommandBar Visibility="Hover">
+				<Button Icon="ArrowOpen" Command="{BindCmd Open, Url='/document/waybill/edit', Argument={Bind}}"/>
+				<Button Icon="Delete" Command="{BindCmd DbRemove, Argument={Bind}, Confirm='@[AreYouSure]'}"/>
+			</CommandBar>
+		</DataGridColumn>
+	</DataGrid>
+	<Page.Pager>
+		<Pager Source="{Bind Parent.Pager}"/>
+	</Page.Pager>
+</Page>

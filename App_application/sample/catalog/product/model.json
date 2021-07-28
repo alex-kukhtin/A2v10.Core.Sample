@@ -1,0 +1,21 @@
+{
+	"$schema": "../../../@schemas/model-json-schema.json#",
+	"schema": "a2v10sample",
+	"model": "Product",
+	"actions": {
+		"index": {
+			"index": true,
+			"view": "index.view"
+		}
+	},
+	"dialogs": {
+		"edit": {
+			"template": "edit.template",
+			"view": "edit.dialog"
+		},
+		"browse": {
+			"index": true,
+			"view": "browse.dialog"
+		}
+	}
+}
