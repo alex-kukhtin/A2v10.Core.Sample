@@ -13,3 +13,7 @@ To run this sample:
 8. Run (without debugging - Ctrl + F5)
 9. Login: admin@admin.com, Password: Admin
 
+See also:
+
+- .NET Framework version: [A2v10.Web.Sample](https://github.com/alex-kukhtin/A2v10.Web.Sample).
+
