@@ -1,5 +1,5 @@
 # A2v10.Core.Sample
-Sample application for A2v10 platform (.NET 5)
+Sample application for A2v10 platform (.NET 6)
 
 To run this sample:
 
